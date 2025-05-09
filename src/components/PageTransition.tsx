@@ -22,10 +22,9 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-purple-light/90 to-skyblue/90 z-50">
         <div className="text-center">
-          <div className="relative w-64 h-2 bg-white/30 rounded-full overflow-hidden my-6">
-            <div className="absolute top-0 left-0 h-full w-full">
-              <Plane className="text-white w-10 h-10 absolute -rotate-12 animate-plane-loader" />
-            </div>
+          <div className="relative w-64 h-4 bg-white/30 rounded-full overflow-hidden my-6">
+            <div className="absolute top-0 left-0 h-full bg-white/50 rounded-full animate-progress-bar"></div>
+            <Plane className="text-white w-8 h-8 absolute top-1/2 -translate-y-1/2 -rotate-12 animate-plane-loader" />
           </div>
           <p className="text-white font-medium">Loading your travel experience...</p>
         </div>
