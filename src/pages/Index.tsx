@@ -13,7 +13,7 @@ const Index = () => {
     <PageTransition>
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 text-center">
           <Hero />
           <SearchTabs />
           <Deals />

@@ -117,6 +117,17 @@ export default {
 					'0%': { transform: 'translateX(-100%)' },
 					'100%': { transform: 'translateX(200%)' }
 				},
+				float: {
+					'0%': {
+						transform: 'translateY(0px) rotate(0deg)'
+					},
+					'50%': {
+						transform: 'translateY(-20px) rotate(5deg)'
+					},
+					'100%': {
+						transform: 'translateY(0px) rotate(0deg)'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -127,7 +138,7 @@ export default {
 				'plane-loader': 'plane-loader 1.5s infinite linear',
 			},
 			backgroundImage: {
-				'gradient-travel': 'linear-gradient(90deg, hsl(220, 78%, 29%, 1) 0%, hsl(221, 45%, 73%, 1) 100%)',
+				'gradient-travel': 'linear-gradient(90deg, #6366f1 0%, #a78bfa 50%, #3b82f6 100%)',
 				'gradient-purple': 'linear-gradient(90deg, hsl(277, 75%, 84%, 1) 0%, hsl(297, 50%, 51%, 1) 100%)'
 			}
 		}

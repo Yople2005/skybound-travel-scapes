@@ -19,20 +19,20 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full px-4 py-3 bg-gradient-travel text-white shadow-md">
+    <header className="w-full px-4 py-3 bg-gradient-to-r from-purple via-purple-light to-skyblue text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center transition-transform hover:scale-105">
           <h1 className="text-2xl font-bold">SkyWay</h1>
           <span className="ml-2 text-xs bg-white text-purple px-2 py-0.5 rounded-full">Travel</span>
         </Link>
 
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 text-center">
           {navLinks.map((link, index) => (
             <Link 
               key={index} 
               to={link.path}
-              className={`flex items-center hover:text-purple-light transition-colors ${
-                isActive(link.path) ? 'text-purple-light border-b-2 border-purple-light' : ''
+              className={`flex items-center hover:text-purple-light transition-all ${
+                isActive(link.path) ? 'text-purple-light border-b-2 border-purple-light scale-105' : ''
               }`}
             >
               {link.icon}
@@ -42,7 +42,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-3">
-          <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-purple-dark">
+          <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-purple-dark transition-all">
             Sign In
           </Button>
         </div>

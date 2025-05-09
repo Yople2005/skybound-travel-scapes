@@ -30,7 +30,7 @@ const SearchTabs = () => {
     <div className="w-full max-w-6xl mx-auto -mt-8 px-4 relative z-10">
       <div className="bg-white rounded-lg shadow-lg p-6 animate-fade-in">
         <Tabs defaultValue="flights" onValueChange={handleTabChange} className="w-full">
-          <TabsList className="grid grid-cols-3 mb-6">
+          <TabsList className="grid grid-cols-3 mb-6 bg-gradient-to-r from-purple-light to-skyblue-light">
             <TabsTrigger value="flights" className="py-3 text-base flex items-center justify-center">
               <Plane className="mr-2 h-4 w-4" />
               Flights
@@ -44,13 +44,13 @@ const SearchTabs = () => {
               Cars
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="flights" className="mt-2">
+          <TabsContent value="flights" className="mt-2 text-center">
             <FlightSearch onSubmit={() => handleSearch('flights')} />
           </TabsContent>
-          <TabsContent value="stays" className="mt-2">
+          <TabsContent value="stays" className="mt-2 text-center">
             <StaySearch onSubmit={() => handleSearch('stays')} />
           </TabsContent>
-          <TabsContent value="cars" className="mt-2">
+          <TabsContent value="cars" className="mt-2 text-center">
             <CarSearch onSubmit={() => handleSearch('cars')} />
           </TabsContent>
         </Tabs>

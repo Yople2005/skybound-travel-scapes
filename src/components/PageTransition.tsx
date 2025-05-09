@@ -10,10 +10,10 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading for at least 800ms for better UX
+    // Increase loading time to 1.5 seconds to better see the animation
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 800);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
