@@ -28,18 +28,18 @@ const SearchTabs = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto -mt-8 px-4 relative z-10">
-      <div className="bg-white rounded-lg shadow-lg p-6 animate-fade-in">
+      <div className="bg-white rounded-lg shadow-lg p-6 animate-fade-in text-center">
         <Tabs defaultValue="flights" onValueChange={handleTabChange} className="w-full">
-          <TabsList className="grid grid-cols-3 mb-6 bg-gradient-to-r from-purple-light to-skyblue-light">
-            <TabsTrigger value="flights" className="py-3 text-base flex items-center justify-center">
+          <TabsList className="grid grid-cols-3 mb-6 bg-gradient-to-r from-purple via-purple-light to-skyblue">
+            <TabsTrigger value="flights" className="py-3 text-base flex items-center justify-center data-[state=active]:bg-white data-[state=active]:text-purple-dark data-[state=active]:font-medium">
               <Plane className="mr-2 h-4 w-4" />
               Flights
             </TabsTrigger>
-            <TabsTrigger value="stays" className="py-3 text-base flex items-center justify-center">
+            <TabsTrigger value="stays" className="py-3 text-base flex items-center justify-center data-[state=active]:bg-white data-[state=active]:text-purple-dark data-[state=active]:font-medium">
               <Bed className="mr-2 h-4 w-4" />
               Stays
             </TabsTrigger>
-            <TabsTrigger value="cars" className="py-3 text-base flex items-center justify-center">
+            <TabsTrigger value="cars" className="py-3 text-base flex items-center justify-center data-[state=active]:bg-white data-[state=active]:text-purple-dark data-[state=active]:font-medium">
               <Car className="mr-2 h-4 w-4" />
               Cars
             </TabsTrigger>

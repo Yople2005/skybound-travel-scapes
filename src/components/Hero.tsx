@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-gradient-travel text-white pt-16 pb-24 relative overflow-hidden">
+    <div className="bg-gradient-to-r from-purple-dark via-purple to-skyblue text-white pt-16 pb-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-blue-900 opacity-20"></div>
       
       {/* Animated elements in the background */}
@@ -31,24 +31,24 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-6 mt-10">
             <div 
               onClick={() => handleNavigate('/flights')}
-              className="flex flex-col items-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg transition-all hover:scale-110 hover:bg-white/20 cursor-pointer"
+              className="flex flex-col items-center bg-white/20 backdrop-blur-sm px-8 py-6 rounded-lg transition-all hover:scale-110 hover:bg-white/30 cursor-pointer shadow-lg"
             >
-              <Plane className="h-8 w-8 mb-2" />
-              <span className="font-medium">Flights</span>
+              <Plane className="h-10 w-10 mb-3" />
+              <span className="font-medium text-center">Flights</span>
             </div>
             <div 
               onClick={() => handleNavigate('/stays')}
-              className="flex flex-col items-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg transition-all hover:scale-110 hover:bg-white/20 cursor-pointer"
+              className="flex flex-col items-center bg-white/20 backdrop-blur-sm px-8 py-6 rounded-lg transition-all hover:scale-110 hover:bg-white/30 cursor-pointer shadow-lg"
             >
-              <Bed className="h-8 w-8 mb-2" />
-              <span className="font-medium">Stays</span>
+              <Bed className="h-10 w-10 mb-3" />
+              <span className="font-medium text-center">Stays</span>
             </div>
             <div 
               onClick={() => handleNavigate('/cars')}
-              className="flex flex-col items-center bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg transition-all hover:scale-110 hover:bg-white/20 cursor-pointer"
+              className="flex flex-col items-center bg-white/20 backdrop-blur-sm px-8 py-6 rounded-lg transition-all hover:scale-110 hover:bg-white/30 cursor-pointer shadow-lg"
             >
-              <Car className="h-8 w-8 mb-2" />
-              <span className="font-medium">Cars</span>
+              <Car className="h-10 w-10 mb-3" />
+              <span className="font-medium text-center">Cars</span>
             </div>
           </div>
         </div>

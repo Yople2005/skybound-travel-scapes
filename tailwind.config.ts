@@ -74,7 +74,7 @@ export default {
 					dark: '#0FA0CE'
 				},
 				purple: {
-					light: '#D6BCFA',
+					light: '#D6BCFA', 
 					DEFAULT: '#9b87f5',
 					dark: '#7E69AB'
 				}
@@ -87,23 +87,27 @@ export default {
 			keyframes: {
 				'accordion-down': {
 					from: {
-						height: '0'
+						height: '0',
+						opacity: '0'
 					},
 					to: {
-						height: 'var(--radix-accordion-content-height)'
+						height: 'var(--radix-accordion-content-height)',
+						opacity: '1' 
 					}
 				},
 				'accordion-up': {
 					from: {
-						height: 'var(--radix-accordion-content-height)'
+						height: 'var(--radix-accordion-content-height)',
+						opacity: '1'
 					},
 					to: {
-						height: '0'
+						height: '0',
+						opacity: '0'
 					}
 				},
 				'fade-in': {
-					from: { opacity: '0' },
-					to: { opacity: '1' }
+					from: { opacity: '0', transform: 'translateY(10px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
 				},
 				'slide-in': {
 					from: { transform: 'translateY(20px)', opacity: '0' },
@@ -114,8 +118,9 @@ export default {
 					to: { transform: 'translateY(-20px)', opacity: '0' }
 				},
 				'plane-loader': {
-					'0%': { transform: 'translateX(-100%)' },
-					'100%': { transform: 'translateX(200%)' }
+					'0%': { transform: 'translateX(-100%) translateY(0px)' },
+					'50%': { transform: 'translateX(50%) translateY(-10px)' },
+					'100%': { transform: 'translateX(200%) translateY(0px)' }
 				},
 				float: {
 					'0%': {
@@ -135,10 +140,10 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out',
 				'slide-in': 'slide-in 0.5s ease-out',
 				'slide-out': 'slide-out 0.5s ease-out',
-				'plane-loader': 'plane-loader 1.5s infinite linear',
+				'plane-loader': 'plane-loader 2s infinite ease-in-out',
 			},
 			backgroundImage: {
-				'gradient-travel': 'linear-gradient(90deg, #6366f1 0%, #a78bfa 50%, #3b82f6 100%)',
+				'gradient-travel': 'linear-gradient(90deg, #7E69AB 0%, #9b87f5 50%, #1EAEDB 100%)',
 				'gradient-purple': 'linear-gradient(90deg, hsl(277, 75%, 84%, 1) 0%, hsl(297, 50%, 51%, 1) 100%)'
 			}
 		}
