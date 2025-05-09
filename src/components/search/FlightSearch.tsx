@@ -10,10 +10,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const FlightSearch = () => {
+interface FlightSearchProps {
+  onSubmit?: () => void;
+}
+
+const FlightSearch: React.FC<FlightSearchProps> = ({ onSubmit }) => {
   const [tripType, setTripType] = useState('roundtrip');
   const [departureDate, setDepartureDate] = useState<Date>();
   const [returnDate, setReturnDate] = useState<Date>();
+
+  const handleSearch = () => {
+    if (onSubmit) {
+      onSubmit();
+    }
+  };
 
   return (
     <div>
@@ -177,7 +187,13 @@ const FlightSearch = () => {
         </div>
       </div>
 
-      <Button className="w-full py-6 text-lg bg-purple hover:bg-purple-dark">Search Flights</Button>
+      <Button 
+        className="w-full py-6 text-lg bg-purple hover:bg-purple-dark transition-all transform hover:scale-[1.01]"
+        onClick={handleSearch}
+      >
+        <Plane className="mr-2 h-5 w-5" />
+        Search Flights
+      </Button>
     </div>
   );
 };

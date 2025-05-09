@@ -6,19 +6,22 @@ import SearchTabs from '@/components/SearchTabs';
 import Deals from '@/components/Deals';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <SearchTabs />
-        <Deals />
-        <Newsletter />
-      </main>
-      <Footer />
-    </div>
+    <PageTransition>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <Hero />
+          <SearchTabs />
+          <Deals />
+          <Newsletter />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

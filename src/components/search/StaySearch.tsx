@@ -10,9 +10,19 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const StaySearch = () => {
+interface StaySearchProps {
+  onSubmit?: () => void;
+}
+
+const StaySearch: React.FC<StaySearchProps> = ({ onSubmit }) => {
   const [checkIn, setCheckIn] = useState<Date>();
   const [checkOut, setCheckOut] = useState<Date>();
+
+  const handleSearch = () => {
+    if (onSubmit) {
+      onSubmit();
+    }
+  };
 
   return (
     <div>
@@ -134,7 +144,13 @@ const StaySearch = () => {
         </div>
       </div>
 
-      <Button className="w-full py-6 text-lg bg-purple hover:bg-purple-dark">Search Hotels</Button>
+      <Button 
+        className="w-full py-6 text-lg bg-purple hover:bg-purple-dark transition-all transform hover:scale-[1.01]"
+        onClick={handleSearch}
+      >
+        <Bed className="mr-2 h-5 w-5" />
+        Search Hotels
+      </Button>
     </div>
   );
 };
