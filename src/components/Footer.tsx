@@ -54,6 +54,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500 text-sm">
           <p>© 2025 SkyWay Travel. All rights reserved.</p>
+          <p className="mt-2">Designed & Developed by <a href="https://github.com/KhinKhinKyaw" className="text-purple hover:underline" target="_blank" rel="noopener noreferrer">KhinKhinKyaw</a></p>
         </div>
       </div>
     </footer>

@@ -119,7 +119,7 @@ export default {
 				},
 				'plane-loader': {
 					'0%': { transform: 'translateX(-20%) translateY(-50%)' },
-					'100%': { transform: 'translateX(calc(64rem - 100%)) translateY(-50%)' }
+					'100%': { transform: 'translateX(100%) translateY(-50%)' }
 				},
 				'progress-bar': {
 					'0%': { width: '0%' },
